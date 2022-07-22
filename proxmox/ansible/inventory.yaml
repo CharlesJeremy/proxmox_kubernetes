@@ -1,6 +1,5 @@
 all:
   hosts:
     skynet:
-      ansible_host: skynet
-      ansible_user: cmulemi
-      ansible_pass: 94@Potskynet
+      ansible_host: 192.168.10.67
+      ansible_user: charlesMulemiMac
