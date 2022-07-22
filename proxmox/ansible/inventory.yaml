@@ -1,5 +1,6 @@
 all:
   hosts:
-    skynet
-      ansible_user=cmulemi
-      ansible_pass=94@Potskynet
+    skynet:
+      ansible_host: 192.168.10.67
+      ansible_user: cmulemi
+      ansible_pass: 94@Potskynet
