@@ -1,3 +1,5 @@
 all:
   hosts:
     skynet
+      ansible_user=cmulemi
+      ansible_pass=94@Potskynet
