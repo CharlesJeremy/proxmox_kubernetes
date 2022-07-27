@@ -1,0 +1,3 @@
+- name: add user to sudoers
+    become: yes
+    command: sudo usermod -aG sudo charlesmulemiMac

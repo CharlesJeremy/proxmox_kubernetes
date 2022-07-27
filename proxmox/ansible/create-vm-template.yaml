@@ -1,5 +1,5 @@
 ---
-- hosts: pve
+- hosts: proxmox-master
   gather_facts: no
   name: "create VM template"
   vars:

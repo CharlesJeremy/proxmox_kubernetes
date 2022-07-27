@@ -1,5 +1,29 @@
 all:
-  hosts:
-    skynet:
-      ansible_host: 192.168.10.67
-      ansible_user: charlesMulemiMac
+  vars:
+    ansible_user: charlesmulemiMac
+    ansible_password: 94@Potmac
+  children:
+    pve:
+      hosts:
+        proxmox-master:
+          ansible_host: 192.168.10.110
+    control-plane:
+      hosts:
+        control-plane-0.k8s.cluster:
+          ansible_host: 192.168.10.120
+          ansible_default_ipv4:
+            address: 192.168.10.120
+    worker-nodes:
+      hosts:
+        worker-0.k8s.cluster:
+          ansible_host: 192.168.10.130
+          ansible_default_ipv4:
+            address: 192.168.10.130
+        worker-1.k8s.cluster:
+          ansible_host: 192.168.10.131
+          ansible_default_ipv4:
+            address: 192.168.10.131
+        worker-2.k8s.cluster:
+          ansible_host: 192.168.10.132
+          ansible_default_ipv4:
+            address: 192.168.10.132
